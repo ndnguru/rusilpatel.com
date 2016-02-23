@@ -50,12 +50,12 @@
         scrollToTopButton = $('#scrollToTopButton');
 
     $(window).scroll(function() {
-        var scrollTop = this.scrollTop();
+        var scrollTop = $(this).scrollTop();
         if (scrollTop > scrollToTopOffset) {
-            scrollToTopButton.addClass('scroll-to-top-visible');
+            scrollToTopButton.addClass('is-visible');
         }
         else {
-            scrollToTopButton.removeClass('.scroll-to-top-visible');
+            scrollToTopButton.removeClass('is-visible');
         }
     });
 
