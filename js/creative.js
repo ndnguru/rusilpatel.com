@@ -45,4 +45,27 @@
     // Initialize WOW.js Scrolling Animations
     new WOW().init();
 
+    var scrollToTopOffset = 300,
+        scrollToTopDuration = 700,
+        scrollToTopButton = $('#scrollToTopButton');
+
+    $(window).scroll(function() {
+        var scrollTop = this.scrollTop();
+        if (scrollTop > scrollToTopOffset) {
+            scrollToTopButton.addClass('scroll-to-top-visible');
+        }
+        else {
+            scrollToTopButton.removeClass('.scroll-to-top-visible');
+        }
+    });
+
+    scrollToTopButton.on('click', function(event) {
+        event.preventDefault();
+        $('body,html').animate({
+                scrollTop: 0 ,
+            }, scrollToTopDuration
+        );
+    })
+
+
 })(jQuery); // End of use strict
