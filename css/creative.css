@@ -149,7 +149,8 @@ header {
   -moz-background-size: cover;
   background-size: cover;
   -o-background-size: cover;
-  background-position: center;
+  background-position: cover;
+  background-attachment: fixed;
   background-image: url('../img/header.jpg');
   text-align: center;
   color: white;
